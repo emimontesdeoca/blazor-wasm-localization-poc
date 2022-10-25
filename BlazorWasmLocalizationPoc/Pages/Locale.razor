@@ -1,0 +1,9 @@
+﻿@page "/locale"
+@using BlazorWasmLocalizationPoc.Services
+@inject LocaleService localService
+
+<PageTitle>Locale</PageTitle>
+
+<h1>Locale</h1>
+
+<p>@localService.GetByKey("hello"), @localService.GetByKey("world")!</p>

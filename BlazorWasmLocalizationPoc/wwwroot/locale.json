@@ -1,0 +1,28 @@
+﻿[
+  {
+    "key": "hello",
+    "translations": [
+      {
+        "language": "en",
+        "value": "Hello"
+      },
+      {
+        "language": "es",
+        "value": "Hola"
+      }
+    ]
+  },
+  {
+    "key": "world",
+    "translations": [
+      {
+        "language": "en",
+        "value": "World"
+      },
+      {
+        "language": "es",
+        "value": "Mundo"
+      }
+    ]
+  }
+]

@@ -1,0 +1,33 @@
+﻿@using BlazorWasmLocalizationPoc.Services
+@inherits LayoutComponentBase
+@inject LocaleService localService
+
+<div class="page">
+    <div class="sidebar">
+        <NavMenu />
+    </div>
+
+    <main>
+        <div class="top-row px-4 ">
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+
+            <div class="btn-group ms-2" role="group" aria-label="Basic example">
+                <button class="btn btn-primary" @onclick=@(() => ToggleLocale("en"))>English</button>
+                <button class="btn btn-primary" @onclick=@(() => ToggleLocale("es"))>Spanish</button>
+            </div>
+
+        </div>
+
+        <article class="content px-4">
+            @Body
+        </article>
+    </main>
+</div>
+
+
+@code {
+    public void ToggleLocale(string locale)
+    {
+        this.localService.UpdateLocale(locale);
+    }
+}
